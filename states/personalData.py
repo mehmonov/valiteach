@@ -5,6 +5,7 @@ class PersonalData(StatesGroup):
     tel = State()
     tel2 = State()
     yosh = State()
+    kurs = State()
     vaqt = State()
     holat = State()
     maqsad = State()

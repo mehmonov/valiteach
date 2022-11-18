@@ -60,6 +60,18 @@ async def answer_fullname(message: types.Message, state: FSMContext):
             "yosh": yosh
         }
     )
+    await message.answer("Qaysi kurs uchun elon qilingan grandni yutmoqchisiz? ")
+    await PersonalData.next()
+    
+    
+@dp.message_handler(state=PersonalData.kurs)
+async def answer_fullname(message: types.Message, state: FSMContext):
+    kurs = message.text
+    await state.update_data(
+        {
+            "kurs": kurs
+        }
+    )
     await message.answer("Sizga kurs uchun kunning qaysi yarmida bo'lgani yaxshi",reply_markup=kursvaqt)
     await PersonalData.next()
     
