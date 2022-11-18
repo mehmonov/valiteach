@@ -141,8 +141,7 @@ async def answer_vinfo(message: types.Message, state: FSMContext):
     
     await dp.bot.send_message(guruh, msg)
     await message.answer("Tashakkur! \n Sizning malumotlaringiz tekshirish uchun yuborildi. Tez orada siz bilan aloqaga chiqamiz",reply_markup=menu)
-    await PersonalData.state.finish()
-    
+    await state.finish()    
 
 
 
