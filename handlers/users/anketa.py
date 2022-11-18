@@ -34,7 +34,7 @@ async def answer_tel(message: types.Message, state: FSMContext):
     tel = message.text
     await state.update_data(
         {
-            "tel": tel
+            "tel1": tel
         }
     
     )
