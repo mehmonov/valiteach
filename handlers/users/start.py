@@ -1,5 +1,5 @@
 from aiogram import types
-from data.config import CHANNELS
+
 from aiogram.dispatcher.filters.builtin import CommandStart
 from aiogram.dispatcher.filters import Command, Text
 from aiogram.types import Message, ReplyKeyboardRemove
