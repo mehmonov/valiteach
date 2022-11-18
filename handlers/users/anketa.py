@@ -8,7 +8,7 @@ from keyboards.default.kursvaqt import kursvaqt
 from keyboards.default.holat import holat
 from loader import dp
 from keyboards.default.welcomeBtn import menu
-
+from keyboards.default.kurs import kurs
 from states.personalData import PersonalData
 
 
@@ -60,7 +60,7 @@ async def answer_yosh(message: types.Message, state: FSMContext):
             "yosh": yosh
         }
     )
-    await message.answer("Qaysi kurs uchun elon qilingan grandni yutmoqchisiz? ")
+    await message.answer("Qaysi kurs uchun elon qilingan grandni yutmoqchisiz? ", reply_markup=kurs)
     await PersonalData.next()
     
     

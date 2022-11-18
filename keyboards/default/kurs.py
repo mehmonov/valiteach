@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-holat = ReplyKeyboardMarkup(
+kurs = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="Python: telegram bot"),
