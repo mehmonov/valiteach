@@ -10,8 +10,7 @@ from loader import dp
 from keyboards.default.welcomeBtn import menu
 
 from states.personalData import PersonalData
-import pygsheets
-import pandas as pd
+
 
 @dp.message_handler(text='💡 Grand uchun ro\'yhatdan o\'tish')
 async def enter(message: types.Message):
