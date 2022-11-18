@@ -38,7 +38,7 @@ async def answer_tel(message: types.Message, state: FSMContext):
         }
     
     )
-    await message.answer("Yaxshi. Agar bu raqamga telefon qilib bog'lana olmasak, boshqa telefon raqam bormi biz bog'lanishimiz uchun? Bor bo'lsa o'shani kiriting yoki pastdagi tugmani bosing: ", reply_markup=tel2)
+    await message.answer("Yaxshi. Agar bu raqamga telefon qilib bog'lana olmasak, boshqa telefon raqam bormi biz bog'lanishimiz uchun? Bor bo'lsa o'shani kiriting. Agar ikkinchi raqam mavjud bo'lmasa shunchaki pastdagi tugmani bosing ", reply_markup=tel2)
     await PersonalData.next()
     
 @dp.message_handler(state=PersonalData.tel2)
@@ -74,8 +74,6 @@ async def answer_kurs(message: types.Message, state: FSMContext):
     )
     await message.answer("Sizga kurs uchun kunning qaysi yarmida bo'lgani yaxshi",reply_markup=kursvaqt)
     await PersonalData.next()
-    
-    
 @dp.message_handler(state=PersonalData.vaqt)
 async def answer_vaqt(message: types.Message, state: FSMContext):
     vaqt = message.text
@@ -121,7 +119,8 @@ async def answer_vinfo(message: types.Message, state: FSMContext):
     )
     data = await state.get_data()
     fullname = data.get("fullname")
-    tel1 = data.get("tel2")
+    tel1 = data.get("tel1")
+    tel2 = data.get("tel2")
     yosh = data.get("yosh")
     vaqt = data.get("vaqt")
     holat = data.get("holat")
