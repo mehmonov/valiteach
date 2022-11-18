@@ -30,7 +30,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     await message.answer("Iltimos telefon raqamingizni kiriting kiriting")
 
 @dp.message_handler(state=PersonalData.tel)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_tel(message: types.Message, state: FSMContext):
     tel = message.text
     await state.update_data(
         {
@@ -42,7 +42,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     await PersonalData.next()
     
 @dp.message_handler(state=PersonalData.tel2)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_tel2(message: types.Message, state: FSMContext):
     tel2 = message.text
     await state.update_data(
         {
@@ -53,7 +53,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     await PersonalData.next()
     
 @dp.message_handler(state=PersonalData.yosh)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_yosh(message: types.Message, state: FSMContext):
     yosh = message.text
     await state.update_data(
         {
@@ -65,7 +65,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     
     
 @dp.message_handler(state=PersonalData.kurs)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_kurs(message: types.Message, state: FSMContext):
     kurs = message.text
     await state.update_data(
         {
@@ -77,7 +77,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     
     
 @dp.message_handler(state=PersonalData.vaqt)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_vaqt(message: types.Message, state: FSMContext):
     vaqt = message.text
     await state.update_data(
         {
@@ -89,7 +89,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     
     
 @dp.message_handler(state=PersonalData.holat)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_holat(message: types.Message, state: FSMContext):
     holat = message.text
     await state.update_data(
         {
@@ -100,7 +100,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     await PersonalData.next()
     
 @dp.message_handler(state=PersonalData.maqsad)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_maqsad(message: types.Message, state: FSMContext):
     maqsad = message.text
     await state.update_data(
         {
@@ -112,7 +112,7 @@ async def answer_fullname(message: types.Message, state: FSMContext):
     
     
 @dp.message_handler(state=PersonalData.vInfo)
-async def answer_fullname(message: types.Message, state: FSMContext):
+async def answer_vinfo(message: types.Message, state: FSMContext):
     vInfo = message.text
     await state.update_data(
         {
