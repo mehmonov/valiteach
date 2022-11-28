@@ -14,8 +14,9 @@ from states.personalData import PersonalData
 
 @dp.message_handler(text='💡 Grand uchun ro\'yhatdan o\'tish')
 async def enter(message: types.Message):
-    await message.answer("Assalomu alaykum. Grafik dizayn va python telegram bot kurslari uchun grand tashkil qilinmoqda \n Iltimos ism va familiyangizni kiriting")
+    await message.answer("Assalomu alaykum. Grafik dizayn va python telegram bot kurslari uchun grand tashkil qilinmoqda \n Iltimos ism va familiyangizni kiriting. ")
     await PersonalData.fullname.set()
+    
 
 @dp.message_handler(state=PersonalData.fullname)
 async def answer_fullname(message: types.Message, state: FSMContext):
