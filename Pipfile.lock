@@ -22,7 +22,7 @@
                 "sha256:d2c5068cc89fc4012038268e111ca9249f66decce817522ec4d215dd829bc507"
             ],
             "index": "pypi",
-            "version": "==2.22.2"
+            "version": "*"
         },
         "aiohttp": {
             "hashes": [
