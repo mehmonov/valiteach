@@ -122,7 +122,6 @@ async def answer_vinfo(message: types.Message, state: FSMContext):
     fullname = data.get("fullname")
     tel1 = data.get("tel1")
     tel2 = data.get("tel2")
-    kurs = data.get("kurs")
     yosh = data.get("yosh")
     vaqt = data.get("vaqt")
     holat = data.get("holat")
@@ -133,7 +132,6 @@ async def answer_vinfo(message: types.Message, state: FSMContext):
     msg += f"Ism - {fullname} \n"
     msg += f"Tel1 - {tel1} \n"
     msg += f"Tel2 - {tel2} \n"
-    msg += f"Kurs - {kurs} \n"
     msg += f"Yosh - {yosh} \n"
     msg += f"Vaqt - {vaqt} \n"
     msg += f"Holat - {holat} \n"
