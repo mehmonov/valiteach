@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-aiogram = "*"
-environs = "*"
-requests ="*"
+aiogram = "~=2.14"
+environs = "~=8.0.0"
+
 
 [dev-packages]
 
